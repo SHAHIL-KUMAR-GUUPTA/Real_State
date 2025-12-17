@@ -11,7 +11,7 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-left"> 
           <img src={logo} alt="Logo" className="logo" />
-          <h1 className="logo-text">BPS Height</h1>
+          <h1 className="logo-text">Real State</h1>
         </div>
 
         <div className={`navbar-center ${menuOpen ? 'open' : ''}`}>
