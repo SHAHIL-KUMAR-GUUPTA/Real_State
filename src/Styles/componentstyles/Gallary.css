@@ -1,0 +1,102 @@
+/* Container for the gallery */
+.gallery-container {
+    padding: 5px 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .gallery-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+  
+  /* Grid system to handle images with different sizes */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #eee;
+  }
+  
+  /* Ensures images cover the container while maintaining aspect ratio */
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Maintains aspect ratio and covers the container */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Fullscreen Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .overlay-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .show-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .show-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .gallery-img {
+      height: auto;
+    }
+  
+    .close-btn {
+      font-size: 1.5rem;
+      top: 20px;
+      right: 20px;
+    }
+  }
+  

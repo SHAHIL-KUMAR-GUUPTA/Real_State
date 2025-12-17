@@ -1,0 +1,13 @@
+.news-container {
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+   
+  .single-news-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -1,0 +1,46 @@
+.facilities-container {
+  padding: 1px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.facilities-heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #0077b6;
+  display: inline-block;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.amenity-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.amenity-item:hover {
+  transform: scale(1.08);
+}
+
+.icon {
+  font-size: 36px; /* Reduced size */
+  margin-bottom: 8px;
+}
+
+.amenity-item p {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}

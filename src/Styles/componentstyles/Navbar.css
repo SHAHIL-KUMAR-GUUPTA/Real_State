@@ -1,0 +1,157 @@
+/* src/components/Navbar.css */
+
+ 
+.logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  .logo-text {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+/* .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 12px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 12px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    position: fixed;       /* fixed position */
+    top: 0;                /* stick to top */
+    left: 0;
+    right: 0;
+    z-index: 1000;        
+  }  
+
+
+
+  .navbar-left {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  
+  .navbar-center {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-center a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .navbar-center a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #007bff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .navbar-center a:hover::after {
+    width: 100%;
+  }
+  
+  .navbar-center a:hover {
+    color: #007bff;
+  }
+  
+  .navbar-right {
+    font-weight: 600;
+    color: #27ae60;
+    white-space: nowrap;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .phone-link {
+    background-color: #007bff; /* Attractive blue background */
+    color: white;              /* White text */
+    padding: 10px 16px;        /* Spacing inside */
+    border-radius: 8px;        /* Rounded corners */
+    text-decoration: none;     /* Remove underline */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+  
+  .phone-link:hover {
+    background-color: hsl(23, 85%, 50%); /* Darker blue on hover */
+    text-decoration: none;     /* Still no underline */
+    cursor: pointer;
+  }
+  
+  /* Responsive Style */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px;
+    }
+  
+    .navbar-center {
+      width: 100%;
+      flex-direction: column;
+      display: none;
+      margin-top: 10px;
+    }
+  
+    .navbar-center.open {
+      display: flex;
+    }
+  
+    .navbar-right {
+      display: none;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+  
+    .navbar-right.open {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .hamburger {
+      display: block;
+      position: absolute;
+      right: 24px;
+      top: 18px;
+    }
+  }
+  
